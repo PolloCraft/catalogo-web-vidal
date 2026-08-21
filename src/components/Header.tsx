@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, ShoppingCart, Menu, X } from 'lucide-react'
+import { useCart } from '../context/CartContext'
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [busqueda, setBusqueda] = useState('')
+  const { totalItems, toggleCart } = useCart()
 
   return (
     <header className="sticky top-0 z-50 bg-[var(--color-secondary)] text-white">
@@ -35,11 +37,16 @@ export default function Header() {
               className="w-full pl-9 pr-4 py-2 rounded-full bg-white text-[var(--color-text)] text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
             />
           </div>
-          <button className="relative p-2 hover:bg-white/10 rounded-full transition-colors">
+          <button
+            onClick={toggleCart}
+            className="relative p-2 hover:bg-white/10 rounded-full transition-colors"
+          >
             <ShoppingCart className="w-5 h-5" />
-            <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-              0
-            </span>
+            {totalItems > 0 && (
+              <span className="absolute -top-1 -right-1 bg-[var(--color-primary)] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                {totalItems}
+              </span>
+            )}
           </button>
           <a
             href="https://wa.me/51999999999?text=Hola,%20quiero%20cotizar%20un%20producto"

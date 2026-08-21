@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ChevronLeft, Package, Truck } from 'lucide-react'
 import { getProductById, getProductsByCategory } from '../services/productService'
+import { useCart } from '../context/CartContext'
 import type { Product } from '../types'
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>()
+  const { addItem } = useCart()
   const [producto, setProducto] = useState<Product | null>(null)
   const [relacionados, setRelacionados] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
@@ -192,7 +194,16 @@ export default function ProductDetail() {
             </p>
           </div>
 
-          {/* Botón WhatsApp */}
+          {/* Botones de acción */}
+          <div className="flex gap-3 mb-4">
+            <button
+              onClick={() => addItem(producto)}
+              disabled={producto.stock === 0}
+              className="flex-1 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] disabled:opacity-50 disabled:cursor-not-allowed text-white text-center py-3 rounded-[var(--radius-full)] font-semibold transition-colors"
+            >
+              Agregar a cotización
+            </button>
+          </div>
           <a
             href={`https://wa.me/51999999999?text=Hola,%20quiero%20cotizar%20el%20producto:%20${encodeURIComponent(producto.nombre)}%20(SKU:%20${producto.sku})`}
             target="_blank"

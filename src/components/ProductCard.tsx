@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useCart } from '../context/CartContext'
 import type { Product } from '../types'
 
 interface Props {
@@ -6,6 +7,8 @@ interface Props {
 }
 
 export default function ProductCard({ product }: Props) {
+  const { addItem } = useCart()
+
   const formatPrecio = (precio: number) =>
     new Intl.NumberFormat('es-PE', { style: 'currency', currency: 'PEN' }).format(precio)
 
@@ -77,7 +80,9 @@ export default function ProductCard({ product }: Props) {
             className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white text-xs font-semibold px-3 py-1.5 rounded-[var(--radius-full)] transition-colors"
             onClick={(e) => {
               e.preventDefault()
+              addItem(product)
             }}
+            disabled={product.stock === 0}
           >
             Cotizar
           </button>
