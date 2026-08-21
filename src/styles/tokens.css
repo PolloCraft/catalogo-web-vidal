@@ -1,0 +1,53 @@
+:root {
+  /* Colores de marca */
+  --color-primary: #D62828;
+  --color-primary-dark: #9E1B1B;
+  --color-secondary: #1D3557;
+  --color-accent: #F4A300;
+  --color-whatsapp: #25D366;
+
+  /* Colores de texto */
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+
+  /* Colores de interfaz */
+  --color-border: #E2E8F0;
+  --color-surface: #FFFFFF;
+  --color-bg: #F8FAFC;
+
+  /* Tipografia */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Escala tipografica (px) */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 40px;
+
+  /* Espaciado (multiplos de 4) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Bordes */
+  --radius-sm: 8px;
+  --radius-full: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* Transiciones */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+}
