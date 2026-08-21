@@ -1,0 +1,802 @@
+[
+  {
+    "id": "PROD-001",
+    "sku": "FER-001",
+    "nombre": "Martillo de Uña Acero Forjado 16 oz",
+    "descripcion": "Martillo de uña profesional con mango de fiberglass, cabeza de acero forjado y revestimiento antideslizante.",
+    "categoria": "ferreteria",
+    "marca": "Truper",
+    "precio": 45.90,
+    "precioMayorista": 38.50,
+    "precioAnterior": null,
+    "stock": 50,
+    "imagenes": ["/products/martillo-truper.jpg"],
+    "destacado": true,
+    "etiquetas": ["nuevo", "profesional"],
+    "especificaciones": {
+      "Peso": "16 oz",
+      "Material": "Acero forjado",
+      "Mango": "Fiberglass"
+    }
+  },
+  {
+    "id": "PROD-002",
+    "sku": "FER-002",
+    "nombre": "Juego de Llaves Combinadas 6 a 22 mm",
+    "descripcion": "Set de 10 llaves combinadas cromadas en graduable, con acabado pulido y estuche organizador.",
+    "categoria": "ferreteria",
+    "marca": "Bahco",
+    "precio": 89.90,
+    "precioMayorista": 76.50,
+    "precioAnterior": null,
+    "stock": 30,
+    "imagenes": ["/products/llaves-bahco.jpg"],
+    "destacado": false,
+    "etiquetas": ["herramientas", "set"],
+    "especificaciones": {
+      "Piezas": "10",
+      "Rango": "6-22 mm",
+      "Material": "Acero cromado"
+    }
+  },
+  {
+    "id": "PROD-003",
+    "sku": "FER-003",
+    "nombre": "Taladro Percutor 13mm 850W",
+    "descripcion": "Taladro percutor eléctrico con velocidad variable, reversa y mango auxiliar incluido.",
+    "categoria": "ferreteria",
+    "marca": "DeWalt",
+    "precio": 319.00,
+    "precioMayorista": 285.00,
+    "precioAnterior": null,
+    "stock": 15,
+    "imagenes": ["/products/taladro-dewalt.jpg"],
+    "destacado": false,
+    "etiquetas": ["electrico", "potente"],
+    "especificaciones": {
+      "Potencia": "850W",
+      "Mandril": "13 mm",
+      "Velocidad": "0-3000 RPM"
+    }
+  },
+  {
+    "id": "PROD-004",
+    "sku": "FER-004",
+    "nombre": "Sierra Circular 7-1/4\" 1500W",
+    "descripcion": "Sierra circular profesional con guía láser, base de aluminio y corte a 45 grados.",
+    "categoria": "ferreteria",
+    "marca": "Makita",
+    "precio": 275.00,
+    "precioMayorista": 245.00,
+    "precioAnterior": null,
+    "stock": 0,
+    "imagenes": ["/products/sierra-makita.jpg"],
+    "destacado": false,
+    "etiquetas": ["electrico", "profesional"],
+    "especificaciones": {
+      "Potencia": "1500W",
+      "Diámetro": "7-1/4\"",
+      "Velocidad": "5800 RPM"
+    }
+  },
+  {
+    "id": "PROD-005",
+    "sku": "FER-005",
+    "nombre": "Nivel de Burbuja 60 cm Aluminio",
+    "descripcion": "Nivel profesional de aluminio con 3 ampollas, líneas grabadas laser y superficie antideslizante.",
+    "categoria": "ferreteria",
+    "marca": "Stanley",
+    "precio": 67.50,
+    "precioMayorista": 58.00,
+    "precioAnterior": null,
+    "stock": 40,
+    "imagenes": ["/products/nivel-stanley.jpg"],
+    "destacado": false,
+    "etiquetas": ["medición", "precisión"],
+    "especificaciones": {
+      "Longitud": "60 cm",
+      "Material": "Aluminio",
+      "Ampollas": "3"
+    }
+  },
+  {
+    "id": "PROD-006",
+    "sku": "FER-006",
+    "nombre": "Set de 12 Destornilladores de Precisión con Punta Magnética para Trabajo en Electrónica y Mecánica",
+    "descripcion": "Juego de destornilladores de precisión con puntas magnéticas, mangos ergonómicos y estuche portátil.",
+    "categoria": "ferreteria",
+    "marca": "Bahco",
+    "precio": 54.90,
+    "precioMayorista": 47.00,
+    "precioAnterior": null,
+    "stock": 25,
+    "imagenes": ["/products/destornilladores-bahco.jpg"],
+    "destacado": false,
+    "etiquetas": ["precisión", "electrónica"],
+    "especificaciones": {
+      "Piezas": "12",
+      "Punta": "Magnética",
+      "Material": "Vanadio"
+    }
+  },
+  {
+    "id": "PROD-007",
+    "sku": "FER-007",
+    "nombre": "Llave Inglesa 12\" Cromada",
+    "descripcion": "Llave inglesa ajustable de 12 pulgadas con acabado cromado y mecanismo de ajuste rápido.",
+    "categoria": "ferreteria",
+    "marca": "Truper",
+    "precio": 38.50,
+    "precioMayorista": 33.00,
+    "precioAnterior": null,
+    "stock": 45,
+    "imagenes": ["/products/llave-inglesa-truper.jpg"],
+    "destacado": false,
+    "etiquetas": ["ajustable", "cromada"],
+    "especificaciones": {
+      "Longitud": "12\"",
+      "Material": "Acero cromado",
+      "Apertura": "0-32 mm"
+    }
+  },
+  {
+    "id": "PROD-008",
+    "sku": "FER-008",
+    "nombre": "Juego de Brocas para Concreto SDS-Plus 5 piezas",
+    "descripcion": "Set de brocas SDS-Plus para taladro percutor, ideales para concreto y mampostería.",
+    "categoria": "ferreteria",
+    "marca": "Makita",
+    "precio": 72.00,
+    "precioMayorista": 62.00,
+    "precioAnterior": null,
+    "stock": 20,
+    "imagenes": ["/products/brocas-makita.jpg"],
+    "destacado": false,
+    "etiquetas": ["brocas", "concreto"],
+    "especificaciones": {
+      "Piezas": "5",
+      "Tipo": "SDS-Plus",
+      "Rango": "5-14 mm"
+    }
+  },
+  {
+    "id": "PROD-009",
+    "sku": "ILU-001",
+    "nombre": "Foco LED Bulbo 9W Luz Blanca",
+    "descripcion": "Foco LED de bajo consumo con base E27, luz blanca natural de 6500K y vida útil de 25,000 horas.",
+    "categoria": "iluminacion",
+    "marca": "Philips",
+    "precio": 12.90,
+    "precioMayorista": 10.50,
+    "precioAnterior": null,
+    "stock": 100,
+    "imagenes": ["/products/foco-led-philips.jpg"],
+    "destacado": true,
+    "etiquetas": ["LED", "ahorro"],
+    "especificaciones": {
+      "Potencia": "9W",
+      "Base": "E27",
+      "Temperatura": "6500K"
+    }
+  },
+  {
+    "id": "PROD-010",
+    "sku": "ILU-002",
+    "nombre": "Tubo Fluorescente T8 40W Luz Día",
+    "descripcion": "Tubo fluorescente lineal de 120cm con base G13, alta eficiencia lumínica y bajo parpadeo.",
+    "categoria": "iluminacion",
+    "marca": "Philips",
+    "precio": 15.50,
+    "precioMayorista": 13.00,
+    "precioAnterior": null,
+    "stock": 80,
+    "imagenes": ["/products/tubo-fluorescente.jpg"],
+    "destacado": false,
+    "etiquetas": ["fluorescente", "tubo"],
+    "especificaciones": {
+      "Potencia": "40W",
+      "Base": "G13",
+      "Largo": "120 cm"
+    }
+  },
+  {
+    "id": "PROD-011",
+    "sku": "ILU-003",
+    "nombre": "Panel LED Empotrable 60x60 cm 40W",
+    "descripcion": "Panel LED cuadrado para cielo falso, 40W de potencia, luz blanca neutral y cuerpo de aluminio.",
+    "categoria": "iluminacion",
+    "marca": "Schneider",
+    "precio": 145.00,
+    "precioMayorista": 125.00,
+    "precioAnterior": null,
+    "stock": 25,
+    "imagenes": ["/products/panel-led-schneider.jpg"],
+    "destacado": false,
+    "etiquetas": ["panel", "empotrable"],
+    "especificaciones": {
+      "Potencia": "40W",
+      "Dimensiones": "60x60 cm",
+      "Flujo": "3600 lúmenes"
+    }
+  },
+  {
+    "id": "PROD-012",
+    "sku": "ILU-004",
+    "nombre": "Foco LED 15W Base E27 Luz Cálida",
+    "descripcion": "Foco LED de 15W con luz cálida 3000K, ideal para interiores, ahorro energético hasta 80%.",
+    "categoria": "iluminacion",
+    "marca": "Omnitech",
+    "precio": 18.50,
+    "precioMayorista": 15.00,
+    "precioAnterior": null,
+    "stock": 60,
+    "imagenes": ["/products/foco-led-15w.jpg"],
+    "destacado": false,
+    "etiquetas": ["LED", "cálida"],
+    "especificaciones": {
+      "Potencia": "15W",
+      "Base": "E27",
+      "Temperatura": "3000K"
+    }
+  },
+  {
+    "id": "PROD-013",
+    "sku": "ILU-005",
+    "nombre": "Base para Lámpara de Pie Conmutador",
+    "descripcion": "Base de cerámica para lámparas de piso con interruptor conmutador de 3 posiciones y cable de 1.5m.",
+    "categoria": "iluminacion",
+    "marca": "Stanley",
+    "precio": 28.90,
+    "precioMayorista": 24.50,
+    "precioAnterior": null,
+    "stock": 35,
+    "imagenes": ["/products/base-lampara.jpg"],
+    "destacado": false,
+    "etiquetas": ["accesorio", "lámpara"],
+    "especificaciones": {
+      "Material": "Cerámica",
+      "Cable": "1.5 m",
+      "Posiciones": "3"
+    }
+  },
+  {
+    "id": "PROD-014",
+    "sku": "ILU-006",
+    "nombre": "Tubo LED 18W T8 Luz Neutra",
+    "descripcion": "Tubo LED de reemplazo directo para fluorescentes, 18W, base G13 y luz neutral 4000K.",
+    "categoria": "iluminacion",
+    "marca": "Philips",
+    "precio": 22.00,
+    "precioMayorista": 18.50,
+    "precioAnterior": null,
+    "stock": 70,
+    "imagenes": ["/products/tubo-led-18w.jpg"],
+    "destacado": false,
+    "etiquetas": ["LED", "reemplazo"],
+    "especificaciones": {
+      "Potencia": "18W",
+      "Base": "G13",
+      "Largo": "120 cm"
+    }
+  },
+  {
+    "id": "PROD-015",
+    "sku": "ILU-007",
+    "nombre": "Lámpara LED de Escritorio Flexible",
+    "descripcion": "Lámpara de escritorio con brazo flexible, porta USB, intensidad regulable y luz cálida.",
+    "categoria": "iluminacion",
+    "marca": "Schneider",
+    "precio": 85.00,
+    "precioMayorista": 72.00,
+    "precioAnterior": null,
+    "stock": 30,
+    "imagenes": ["/products/lampara-escritorio.jpg"],
+    "destacado": false,
+    "etiquetas": ["escritorio", "flexible"],
+    "especificaciones": {
+      "Potencia": "10W",
+      "Puerto": "USB 5V",
+      "Regulable": "Sí, 3 niveles"
+    }
+  },
+  {
+    "id": "PROD-016",
+    "sku": "ILU-008",
+    "nombre": "Foco Halógeno GU10 50W",
+    "descripcion": "Foco halógeno de 50W con base GU10, luz blanca dirigida ideal para spots y luminarias empotrables.",
+    "categoria": "iluminacion",
+    "marca": "Omnitech",
+    "precio": 9.90,
+    "precioMayorista": 8.00,
+    "precioAnterior": null,
+    "stock": 50,
+    "imagenes": [],
+    "destacado": false,
+    "etiquetas": ["halógeno", "spot"],
+    "especificaciones": {
+      "Potencia": "50W",
+      "Base": "GU10",
+      "Temperatura": "2700K"
+    }
+  },
+  {
+    "id": "PROD-017",
+    "sku": "ELE-001",
+    "nombre": "Cable THW 12 AWG Rojo 100m",
+    "descripcion": "Cable eléctrico THW unipolar 12 AWG, aislamiento de PVC rojo, certify NOM y UL para instalaciones industriales.",
+    "categoria": "electricos",
+    "marca": "Condumex",
+    "precio": 185.00,
+    "precioMayorista": 162.00,
+    "precioAnterior": null,
+    "stock": 40,
+    "imagenes": ["/products/cable-thw-12.jpg"],
+    "destacado": true,
+    "etiquetas": ["cable", "industrial"],
+    "especificaciones": {
+      "Calibre": "12 AWG",
+      "Color": "Rojo",
+      "Longitud": "100 m"
+    }
+  },
+  {
+    "id": "PROD-018",
+    "sku": "ELE-002",
+    "nombre": "Interruptor Termomagnético 20A 2P",
+    "descripcion": "Interruptor termomagnético bipolar de 20 amperios, protección contra sobrecarga y cortocircuito.",
+    "categoria": "electricos",
+    "marca": "Schneider",
+    "precio": 78.50,
+    "precioMayorista": 67.00,
+    "precioAnterior": null,
+    "stock": 35,
+    "imagenes": ["/products/interruptor-20a.jpg"],
+    "destacado": false,
+    "etiquetas": ["protección", "tablero"],
+    "especificaciones": {
+      "Corriente": "20A",
+      "Polos": "2",
+      "Curva": "C"
+    }
+  },
+  {
+    "id": "PROD-019",
+    "sku": "ELE-003",
+    "nombre": "Enchufe Hembra Industrial 20A 250V",
+    "descripcion": "Enchufe hembra tipo industrial de 20 amperios, 250 voltios, con tapa protectora IP44.",
+    "categoria": "electricos",
+    "marca": "Condumex",
+    "precio": 32.00,
+    "precioMayorista": 27.50,
+    "precioAnterior": null,
+    "stock": 0,
+    "imagenes": ["/products/enchufe-industrial.jpg"],
+    "destacado": false,
+    "etiquetas": ["enchufe", "industrial"],
+    "especificaciones": {
+      "Corriente": "20A",
+      "Voltaje": "250V",
+      "Protección": "IP44"
+    }
+  },
+  {
+    "id": "PROD-020",
+    "sku": "ELE-004",
+    "nombre": "Regleta 6 Tomas con Interruptor y Protección",
+    "descripcion": "Regleta eléctrica de 6 tomas con interruptor individual, protección contra picos de voltaje y cable de 3m.",
+    "categoria": "electricos",
+    "marca": "3M",
+    "precio": 65.00,
+    "precioMayorista": 55.00,
+    "precioAnterior": null,
+    "stock": 50,
+    "imagenes": ["/products/regleta-6tomas.jpg"],
+    "destacado": false,
+    "etiquetas": ["regleta", "protección"],
+    "especificaciones": {
+      "Tomas": "6",
+      "Cable": "3 m",
+      "Protección": "Sobretensión"
+    }
+  },
+  {
+    "id": "PROD-021",
+    "sku": "ELE-005",
+    "nombre": "Cable Flexible 14 AWG Verde 50m",
+    "descripcion": "Cable flexible THW 14 AWG verde, aislamiento de PVC, certificado para instalaciones residenciales.",
+    "categoria": "electricos",
+    "marca": "Condumex",
+    "precio": 98.00,
+    "precioMayorista": 84.00,
+    "precioAnterior": null,
+    "stock": 30,
+    "imagenes": ["/products/cable-flexible-14.jpg"],
+    "destacado": false,
+    "etiquetas": ["cable", "residencial"],
+    "especificaciones": {
+      "Calibre": "14 AWG",
+      "Color": "Verde",
+      "Longitud": "50 m"
+    }
+  },
+  {
+    "id": "PROD-022",
+    "sku": "ELE-006",
+    "nombre": "Tomacorriente Doble Americano 15A",
+    "descripcion": "Tomacorriente doble tipo americano de 15 amperios, color blanco, con bornes de alta conductividad.",
+    "categoria": "electricos",
+    "marca": "Schneider",
+    "precio": 14.50,
+    "precioMayorista": 12.00,
+    "precioAnterior": null,
+    "stock": 80,
+    "imagenes": ["/products/tomacorriente-doble.jpg"],
+    "destacado": false,
+    "etiquetas": ["tomacorriente", "doméstico"],
+    "especificaciones": {
+      "Corriente": "15A",
+      "Voltaje": "125V",
+      "Tomas": "2"
+    }
+  },
+  {
+    "id": "PROD-023",
+    "sku": "ELE-007",
+    "nombre": "Conector Rápido para Cable THW 2.5-6 mm²",
+    "descripcion": "Conector de empalme rápido para cables eléctricos, sin necesidad de soldadura, aislamiento IP20.",
+    "categoria": "electricos",
+    "marca": "Condumex",
+    "precio": 8.90,
+    "precioMayorista": 7.50,
+    "precioAnterior": null,
+    "stock": 120,
+    "imagenes": ["/products/conector-rapido.jpg"],
+    "destacado": false,
+    "etiquetas": ["conector", "rápido"],
+    "especificaciones": {
+      "Sección": "2.5-6 mm²",
+      "Tipo": "Empalme",
+      "Protección": "IP20"
+    }
+  },
+  {
+    "id": "PROD-024",
+    "sku": "ADH-001",
+    "nombre": "Silicona Líquida para Pisos 1 Litro",
+    "descripcion": "Silicona líquida multiusos para impermeabilización de techos, paredes y pisos, resistente a UV.",
+    "categoria": "adhesivos",
+    "marca": "Sika",
+    "precio": 42.00,
+    "precioMayorista": 35.50,
+    "precioAnterior": 52.00,
+    "stock": 45,
+    "imagenes": ["/products/silicona-sika.jpg"],
+    "destacado": false,
+    "etiquetas": ["impermeabilizante", "oferta"],
+    "especificaciones": {
+      "Volumen": "1 litro",
+      "Tipo": "Líquida",
+      "Resistencia UV": "Sí"
+    }
+  },
+  {
+    "id": "PROD-025",
+    "sku": "ADH-002",
+    "nombre": "Pega Todo 50ml Resistente",
+    "descripcion": "Adhesivo multifunción de secado rápido, ideal para madera, metal, plástico y cerámica.",
+    "categoria": "adhesivos",
+    "marca": "3M",
+    "precio": 18.90,
+    "precioMayorista": 16.00,
+    "precioAnterior": null,
+    "stock": 70,
+    "imagenes": ["/products/pegatodo-3m.jpg"],
+    "destacado": false,
+    "etiquetas": ["adhesivo", "multiusos"],
+    "especificaciones": {
+      "Volumen": "50 ml",
+      "Secado": "Rápido",
+      "Materiales": "Multi"
+    }
+  },
+  {
+    "id": "PROD-026",
+    "sku": "ADH-003",
+    "nombre": "Cinta de Doble Cara 25mm x 5m",
+    "descripcion": "Cinta adhesiva de doble cara industrial, alta resistencia, ideal para montaje y fijación permanente.",
+    "categoria": "adhesivos",
+    "marca": "3M",
+    "precio": 24.50,
+    "precioMayorista": 21.00,
+    "precioAnterior": null,
+    "stock": 55,
+    "imagenes": ["/products/cinta-doble-cara.jpg"],
+    "destacado": false,
+    "etiquetas": ["cinta", "doble cara"],
+    "especificaciones": {
+      "Ancho": "25 mm",
+      "Largo": "5 m",
+      "Tipo": "Industrial"
+    }
+  },
+  {
+    "id": "PROD-027",
+    "sku": "ADH-004",
+    "nombre": "Pegamento para PVC Industrial 250ml",
+    "descripcion": "Adhesivo solvente para tubería y accesorios de PVC, unión fuerte y resistente a la presión.",
+    "categoria": "adhesivos",
+    "marca": "Sika",
+    "precio": 35.00,
+    "precioMayorista": 30.00,
+    "precioAnterior": null,
+    "stock": 40,
+    "imagenes": ["/products/pegamento-pvc.jpg"],
+    "destacado": false,
+    "etiquetas": ["PVC", "tubería"],
+    "especificaciones": {
+      "Volumen": "250 ml",
+      "Tipo": "Solvente",
+      "Resistencia": "Alta"
+    }
+  },
+  {
+    "id": "PROD-028",
+    "sku": "ADH-005",
+    "nombre": "Resina Epóxica 2 Componentes 500g",
+    "descripcion": "Resina epóxica de alta resistencia para reparación de concreto, metal y fibra de vidrio.",
+    "categoria": "adhesivos",
+    "marca": "Sika",
+    "precio": 68.00,
+    "precioMayorista": 58.00,
+    "precioAnterior": null,
+    "stock": 25,
+    "imagenes": ["/products/resina-epoxica.jpg"],
+    "destacado": false,
+    "etiquetas": ["epóxica", "reparación"],
+    "especificaciones": {
+      "Peso": "500 g",
+      "Componentes": "2",
+      "Tiempo de curado": "24 horas"
+    }
+  },
+  {
+    "id": "PROD-029",
+    "sku": "SEG-001",
+    "nombre": "Casco de Seguridad Industrial Clase A",
+    "descripcion": "Casco de seguridad con barbuqueje, suspensión de 4 puntos, resistente a impactos y electricidad.",
+    "categoria": "seguridad",
+    "marca": "Totto",
+    "precio": 35.00,
+    "precioMayorista": 30.00,
+    "precioAnterior": null,
+    "stock": 60,
+    "imagenes": ["/products/casco-seguridad.jpg"],
+    "destacado": true,
+    "etiquetas": ["casco", "industrial"],
+    "especificaciones": {
+      "Clase": "A",
+      "Suspensión": "4 puntos",
+      "Resistencia": "Impacto y eléctrico"
+    }
+  },
+  {
+    "id": "PROD-030",
+    "sku": "SEG-002",
+    "nombre": "Guantes de Nitrilo Talla L (Par)",
+    "descripcion": "Guantes desechables de nitrilo, resistentes a químicos y perforaciones, aptos para alimentos.",
+    "categoria": "seguridad",
+    "marca": "3M",
+    "precio": 12.50,
+    "precioMayorista": 10.50,
+    "precioAnterior": null,
+    "stock": 200,
+    "imagenes": ["/products/guantes-nitrilo.jpg"],
+    "destacado": true,
+    "etiquetas": ["guantes", "protección"],
+    "especificaciones": {
+      "Talla": "L",
+      "Material": "Nitrilo",
+      "Resistencia": "Químicos"
+    }
+  },
+  {
+    "id": "PROD-031",
+    "sku": "SEG-003",
+    "nombre": "Lentes de Seguridad Transparentes",
+    "descripcion": "Lentes de protección con lente de policarbonato transparente, anti-rayas y anti-empañante.",
+    "categoria": "seguridad",
+    "marca": "3M",
+    "precio": 15.00,
+    "precioMayorista": 12.50,
+    "precioAnterior": null,
+    "stock": 90,
+    "imagenes": ["/products/lentes-seguridad.jpg"],
+    "destacado": false,
+    "etiquetas": ["ojos", "protección"],
+    "especificaciones": {
+      "Material": "Policarbonato",
+      "Protección": "UV400",
+      "Anti-empañante": "Sí"
+    }
+  },
+  {
+    "id": "PROD-032",
+    "sku": "SEG-004",
+    "nombre": "Chaleco Reflectante Clase 2",
+    "descripcion": "Chaleco de alta visibilidad con franjas reflectantes, cierre de velcro, talla única.",
+    "categoria": "seguridad",
+    "marca": "Totto",
+    "precio": 22.00,
+    "precioMayorista": 18.50,
+    "precioAnterior": null,
+    "stock": 75,
+    "imagenes": ["/products/chaleco-reflectante.jpg"],
+    "destacado": false,
+    "etiquetas": ["reflectante", "alta visibilidad"],
+    "especificaciones": {
+      "Clase": "2",
+      "Talla": "Única",
+      "Cierre": "Velcro"
+    }
+  },
+  {
+    "id": "PROD-033",
+    "sku": "SEG-005",
+    "nombre": "Zapatillas de Seguridad Punta de Acero",
+    "descripcion": "Calzado de seguridad con punta de acero, suela antideslizante y resistencia a puncturas.",
+    "categoria": "seguridad",
+    "marca": "Totto",
+    "precio": 125.00,
+    "precioMayorista": 108.00,
+    "precioAnterior": null,
+    "stock": 35,
+    "imagenes": ["/products/zapatillas-seguridad.jpg"],
+    "destacado": false,
+    "etiquetas": ["calzado", "punta acero"],
+    "especificaciones": {
+      "Punta": "Acero",
+      "Suela": "PU antideslizante",
+      "Tallas": "38-44"
+    }
+  },
+  {
+    "id": "PROD-034",
+    "sku": "SEG-006",
+    "nombre": "Mascarilla N95 x 20 Unidades",
+    "descripcion": "Mascarilla desechable de alta eficiencia N95, filtración de partículas, con orejeras ajustables.",
+    "categoria": "seguridad",
+    "marca": "3M",
+    "precio": 45.00,
+    "precioMayorista": 38.50,
+    "precioAnterior": null,
+    "stock": 100,
+    "imagenes": ["/products/mascarilla-n95.jpg"],
+    "destacado": false,
+    "etiquetas": ["mascarilla", "respiratoria"],
+    "especificaciones": {
+      "Filtración": "N95",
+      "Unidades": "20",
+      "Tipo": "Desechable"
+    }
+  },
+  {
+    "id": "PROD-035",
+    "sku": "CAM-001",
+    "nombre": "Mochila Escolar Capacity 42cm",
+    "descripcion": "Mochila escolar ergonómica con compartimento acolchado para laptop, cierre doble y nylon resistente al agua.",
+    "categoria": "campana-escolar",
+    "marca": "Norma",
+    "precio": 89.90,
+    "precioMayorista": 76.00,
+    "precioAnterior": null,
+    "stock": 50,
+    "imagenes": ["/products/mochila-escolar.jpg"],
+    "destacado": true,
+    "etiquetas": ["escolar", "mochila"],
+    "especificaciones": {
+      "Capacidad": "25L",
+      "Material": "Nylon 600D",
+      "Compartimentos": "3"
+    }
+  },
+  {
+    "id": "PROD-036",
+    "sku": "CAM-002",
+    "nombre": "Cuaderno Cuadriculado 100 Hojas",
+    "descripcion": "Cuaderno de 100 hojas cuadriculadas, tamaño carta, tapa dura color azul, ideal para matemáticas.",
+    "categoria": "campana-escolar",
+    "marca": "Norma",
+    "precio": 8.50,
+    "precioMayorista": 7.00,
+    "precioAnterior": null,
+    "stock": 150,
+    "imagenes": ["/products/cuaderno-cuadriculado.jpg"],
+    "destacado": false,
+    "etiquetas": ["cuaderno", "cuadriculado"],
+    "especificaciones": {
+      "Hojas": "100",
+      "Tamaño": "Carta",
+      "Tipo": "Cuadriculado"
+    }
+  },
+  {
+    "id": "PROD-037",
+    "sku": "CAM-003",
+    "nombre": "Lápiz HB x 12 Unidades con Sacapuntas",
+    "descripcion": "Caja de 12 lápices grafito HB de madera cedro, con sacapuntas de metal incluido.",
+    "categoria": "campana-escolar",
+    "marca": "Norma",
+    "precio": 12.00,
+    "precioMayorista": 10.00,
+    "precioAnterior": null,
+    "stock": 120,
+    "imagenes": ["/products/lapiz-hb-12.jpg"],
+    "destacado": false,
+    "etiquetas": ["lápiz", "escritura"],
+    "especificaciones": {
+      "Dureza": "HB",
+      "Unidades": "12",
+      "Material": "Madera cedro"
+    }
+  },
+  {
+    "id": "PROD-038",
+    "sku": "CAM-004",
+    "nombre": "Caja de Colores de 36 Tonos",
+    "descripcion": "Set de 36 colores de madera con punta de grafito, colores vibrantes y caja organizadora.",
+    "categoria": "campana-escolar",
+    "marca": "Norma",
+    "precio": 28.50,
+    "precioMayorista": 24.00,
+    "precioAnterior": null,
+    "stock": 65,
+    "imagenes": ["/products/caja-colores-36.jpg"],
+    "destacado": false,
+    "etiquetas": ["colores", "dibujo"],
+    "especificaciones": {
+      "Tonos": "36",
+      "Material": "Madera",
+      "Punta": "Grafito"
+    }
+  },
+  {
+    "id": "PROD-039",
+    "sku": "CAM-005",
+    "nombre": "Juego de Geometría Escolar 7 Piezas",
+    "descripcion": "Set de geometría con regla, escuadra, transportador, compás, mango y estuche plástico.",
+    "categoria": "campana-escolar",
+    "marca": "Norma",
+    "precio": 18.90,
+    "precioMayorista": 16.00,
+    "precioAnterior": null,
+    "stock": 80,
+    "imagenes": ["/products/geometria-escolar.jpg"],
+    "destacado": false,
+    "etiquetas": ["geometría", "matemáticas"],
+    "especificaciones": {
+      "Piezas": "7",
+      "Material": "Plástico",
+      "Estuche": "Sí"
+    }
+  },
+  {
+    "id": "PROD-040",
+    "sku": "CAM-006",
+    "nombre": "Cartuchera Doble Cierre Escolar con Funda",
+    "descripcion": "Cartuchera escolar de nylon con doble cierre, 3 compartimentos y funda transparente para nombre.",
+    "categoria": "campana-escolar",
+    "marca": "Totto",
+    "precio": 35.00,
+    "precioMayorista": 30.00,
+    "precioAnterior": null,
+    "stock": 55,
+    "imagenes": ["/products/cartuchera-escolar.jpg"],
+    "destacado": false,
+    "etiquetas": ["cartuchera", "escolar"],
+    "especificaciones": {
+      "Compartimentos": "3",
+      "Material": "Nylon",
+      "Cierre": "Doble"
+    }
+  }
+]

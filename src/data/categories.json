@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ferreteria",
+    "nombre": "Ferreteria",
+    "imagen": "/categories/ferreteria.jpg",
+    "descripcion": "Herramientas, tornilleria y materiales de construccion"
+  },
+  {
+    "id": "iluminacion",
+    "nombre": "Iluminacion",
+    "imagen": "/categories/iluminacion.jpg",
+    "descripcion": "Luminarias LED, empotrados y accesorios de iluminacion"
+  },
+  {
+    "id": "electricos",
+    "nombre": "Articulos Electricos",
+    "imagen": "/categories/electricos.jpg",
+    "descripcion": "Cables, interruptores, contactos y tableros"
+  },
+  {
+    "id": "adhesivos",
+    "nombre": "Adhesivos",
+    "imagen": "/categories/adhesivos.jpg",
+    "descripcion": "Siliconas, pegamentos y selladores para todo uso"
+  },
+  {
+    "id": "seguridad",
+    "nombre": "Seguridad Industrial",
+    "imagen": "/categories/seguridad.jpg",
+    "descripcion": "Equipos de proteccion personal y seguridad"
+  },
+  {
+    "id": "campana-escolar",
+    "nombre": "Campana Escolar",
+    "imagen": "/categories/campana-escolar.jpg",
+    "descripcion": "Utiles escolares, mochilas y articulos de oficina"
+  }
+]
