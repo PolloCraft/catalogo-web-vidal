@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Catalog from './pages/Catalog'
 import ProductDetail from './pages/ProductDetail'
 import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             <Route path="/catalogo" element={<Catalog />} />
             <Route path="/producto/:id" element={<ProductDetail />} />
             <Route path="/contacto" element={<Contact />} />
-            <Route path="*" element={<div className="max-w-7xl mx-auto px-4 py-12 text-center"><h1 className="text-[var(--text-2xl)] font-[var(--font-heading)] font-bold text-[var(--color-secondary)]">404 - No encontrado</h1></div>} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

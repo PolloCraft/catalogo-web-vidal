@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { getCategories, getFeaturedProducts, getBrands } from '../services/productService'
+import Skeleton from '../components/Skeleton'
 import type { Category, Product } from '../types'
 
 const BANNER_IMAGES = [
@@ -15,7 +16,7 @@ export default function Home() {
   const [categorias, setCategorias] = useState<Category[]>([])
   const [destacados, setDestacados] = useState<Product[]>([])
   const [marcas, setMarcas] = useState<string[]>([])
-
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     const cargarDatos = async () => {
       const [cats, dest, marks] = await Promise.all([
@@ -26,6 +27,7 @@ export default function Home() {
       setCategorias(cats)
       setDestacados(dest)
       setMarcas(marks)
+      setLoading(false)
     }
     cargarDatos()
   }, [])
@@ -95,23 +97,30 @@ export default function Home() {
           Nuestras Categorías
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {categorias.map(cat => (
-            <Link
-              key={cat.id}
-              to={`/catalogo?categoria=${cat.id}`}
-              className="group bg-[var(--color-surface)] rounded-[var(--radius-sm)] p-4 text-center hover:shadow-[var(--shadow-md)] transition-shadow border border-[var(--color-border)]"
-            >
-              <div className="w-16 h-16 mx-auto mb-3 bg-[var(--color-bg)] rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
-                {cat.id === 'ferreteria' && '🔧'}
-                {cat.id === 'iluminacion' && '💡'}
-                {cat.id === 'electricos' && '⚡'}
-                {cat.id === 'adhesivos' && '🧴'}
-                {cat.id === 'seguridad' && '🦺'}
-                {cat.id === 'campana-escolar' && '📚'}
-              </div>
-              <h3 className="text-sm font-semibold text-[var(--color-text)]">{cat.nombre}</h3>
-            </Link>
-          ))}
+          {loading
+            ? Array.from({ length: 6 }).map((_, i) => (
+                <div key={i} className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] p-4 text-center border border-[var(--color-border)]">
+                  <Skeleton className="w-16 h-16 mx-auto mb-3 rounded-full" />
+                  <Skeleton className="h-4 w-20 mx-auto" />
+                </div>
+              ))
+            : categorias.map(cat => (
+                <Link
+                  key={cat.id}
+                  to={`/catalogo?categoria=${cat.id}`}
+                  className="group bg-[var(--color-surface)] rounded-[var(--radius-sm)] p-4 text-center hover:shadow-[var(--shadow-md)] transition-shadow border border-[var(--color-border)]"
+                >
+                  <div className="w-16 h-16 mx-auto mb-3 bg-[var(--color-bg)] rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                    {cat.id === 'ferreteria' && '🔧'}
+                    {cat.id === 'iluminacion' && '💡'}
+                    {cat.id === 'electricos' && '⚡'}
+                    {cat.id === 'adhesivos' && '🧴'}
+                    {cat.id === 'seguridad' && '🦺'}
+                    {cat.id === 'campana-escolar' && '📚'}
+                  </div>
+                  <h3 className="text-sm font-semibold text-[var(--color-text)]">{cat.nombre}</h3>
+                </Link>
+              ))}
         </div>
       </section>
 
@@ -122,41 +131,53 @@ export default function Home() {
             Productos Destacados
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {destacados.map(producto => (
-              <Link
-                key={producto.id}
-                to={`/producto/${producto.id}`}
-                className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] overflow-hidden border border-[var(--color-border)] hover:shadow-[var(--shadow-lg)] transition-shadow"
-              >
-                <div className="h-48 bg-[var(--color-bg)] flex items-center justify-center text-4xl">
-                  📦
-                </div>
-                <div className="p-4">
-                  <p className="text-xs text-[var(--color-text-muted)] mb-1">{producto.marca} · {producto.sku}</p>
-                  <h3 className="font-semibold text-[var(--color-text)] mb-2 line-clamp-2">{producto.nombre}</h3>
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg font-bold text-[var(--color-primary)]">
-                      {formatPrecio(producto.precio)}
-                    </span>
-                    {producto.precioAnterior && (
-                      <span className="text-sm text-[var(--color-text-muted)] line-through">
-                        {formatPrecio(producto.precioAnterior)}
-                      </span>
-                    )}
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => (
+                  <div key={i} className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] overflow-hidden border border-[var(--color-border)]">
+                    <Skeleton className="h-48 w-full" />
+                    <div className="p-4 space-y-3">
+                      <Skeleton className="h-3 w-24" />
+                      <Skeleton className="h-4 w-full" />
+                      <Skeleton className="h-4 w-3/4" />
+                      <Skeleton className="h-6 w-20" />
+                    </div>
                   </div>
-                  {producto.etiquetas.includes('oferta') && (
-                    <span className="inline-block mt-2 bg-[var(--color-primary)] text-white text-xs px-2 py-1 rounded-[var(--radius-full)]">
-                      Oferta
-                    </span>
-                  )}
-                  {producto.etiquetas.includes('nuevo') && (
-                    <span className="inline-block mt-2 bg-[var(--color-accent)] text-white text-xs px-2 py-1 rounded-[var(--radius-full)]">
-                      Nuevo
-                    </span>
-                  )}
-                </div>
-              </Link>
-            ))}
+                ))
+              : destacados.map(producto => (
+                  <Link
+                    key={producto.id}
+                    to={`/producto/${producto.id}`}
+                    className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] overflow-hidden border border-[var(--color-border)] hover:shadow-[var(--shadow-lg)] transition-shadow"
+                  >
+                    <div className="h-48 bg-[var(--color-bg)] flex items-center justify-center text-4xl">
+                      📦
+                    </div>
+                    <div className="p-4">
+                      <p className="text-xs text-[var(--color-text-muted)] mb-1">{producto.marca} · {producto.sku}</p>
+                      <h3 className="font-semibold text-[var(--color-text)] mb-2 line-clamp-2">{producto.nombre}</h3>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg font-bold text-[var(--color-primary)]">
+                          {formatPrecio(producto.precio)}
+                        </span>
+                        {producto.precioAnterior && (
+                          <span className="text-sm text-[var(--color-text-muted)] line-through">
+                            {formatPrecio(producto.precioAnterior)}
+                          </span>
+                        )}
+                      </div>
+                      {producto.etiquetas.includes('oferta') && (
+                        <span className="inline-block mt-2 bg-[var(--color-primary)] text-white text-xs px-2 py-1 rounded-[var(--radius-full)]">
+                          Oferta
+                        </span>
+                      )}
+                      {producto.etiquetas.includes('nuevo') && (
+                        <span className="inline-block mt-2 bg-[var(--color-accent)] text-white text-xs px-2 py-1 rounded-[var(--radius-full)]">
+                          Nuevo
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                ))}
           </div>
         </div>
       </section>
