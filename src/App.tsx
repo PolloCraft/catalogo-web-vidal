@@ -3,6 +3,7 @@ import { CartProvider } from './context/CartContext'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CartSidebar from './components/CartSidebar'
+import WhatsAppButton from './components/WhatsAppButton'
 import Home from './pages/Home'
 import Catalog from './pages/Catalog'
 import ProductDetail from './pages/ProductDetail'
@@ -15,6 +16,7 @@ function App() {
       <div className="min-h-screen flex flex-col">
         <Header />
         <CartSidebar />
+        <WhatsAppButton />
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
