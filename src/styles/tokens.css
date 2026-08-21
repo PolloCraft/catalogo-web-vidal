@@ -1,19 +1,23 @@
 :root {
-  /* Colores de marca */
-  --color-primary: #D62828;
-  --color-primary-dark: #9E1B1B;
-  --color-secondary: #1D3557;
-  --color-accent: #F4A300;
+  /* Colores de marca - Paleta Chamo Import */
+  --color-primary: #0057B8;
+  --color-primary-dark: #003366;
+  --color-secondary: #0072CE;
+  --color-accent: #009DE0;
   --color-whatsapp: #25D366;
 
+  /* Colores adicionales */
+  --color-light-blue: #66C6FF;
+  --color-dark: #0D0D0D;
+
   /* Colores de texto */
-  --color-text: #0F172A;
-  --color-text-muted: #475569;
+  --color-text: #333333;
+  --color-text-muted: #A6A8AB;
 
   /* Colores de interfaz */
-  --color-border: #E2E8F0;
+  --color-border: #D1D3D4;
   --color-surface: #FFFFFF;
-  --color-bg: #F8FAFC;
+  --color-bg: #F5F5F5;
 
   /* Tipografia */
   --font-heading: 'Poppins', sans-serif;

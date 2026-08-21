@@ -205,7 +205,7 @@ export default function ProductDetail() {
             </button>
           </div>
           <a
-            href={`https://wa.me/51999999999?text=Hola,%20quiero%20cotizar%20el%20producto:%20${encodeURIComponent(producto.nombre)}%20(SKU:%20${producto.sku})`}
+            href={`https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20el%20producto:%20${encodeURIComponent(producto.nombre)}%20(SKU:%20${producto.sku})`}
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full bg-[var(--color-whatsapp)] text-white text-center py-3 rounded-[var(--radius-full)] font-semibold hover:opacity-90 transition-opacity"

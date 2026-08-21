@@ -158,7 +158,7 @@ export default function Contact() {
                   className={`w-full px-4 py-3 rounded-[var(--radius-sm)] border ${
                     errors.telefono ? 'border-red-500' : 'border-[var(--color-border)]'
                   } bg-[var(--color-surface)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
-                  placeholder="999 999 999"
+                  placeholder="936 608 583"
                 />
                 {errors.telefono && <p className="text-red-500 text-xs mt-1">{errors.telefono}</p>}
               </div>
@@ -203,7 +203,7 @@ export default function Contact() {
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-[var(--color-primary)]" />
                 <div>
-                  <p className="font-medium text-[var(--color-text)]">+51 999 999 999</p>
+                  <p className="font-medium text-[var(--color-text)]">+51 936 608 583</p>
                   <p className="text-sm text-[var(--color-text-muted)]">Lun - Vie: 8:00 - 18:00</p>
                 </div>
               </li>

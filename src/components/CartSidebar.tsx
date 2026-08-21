@@ -85,7 +85,7 @@ export default function CartSidebar() {
               <span className="text-lg font-bold text-[var(--color-primary)]">{formatPrecio(subtotal)}</span>
             </div>
             <a
-              href={`https://wa.me/51999999999?text=${encodeURIComponent(
+              href={`https://wa.me/51936608583?text=${encodeURIComponent(
                 'Hola, quiero cotizar:\n' +
                 items.map(item => `- ${item.product.nombre} (x${item.cantidad}) - ${formatPrecio(item.product.precio * item.cantidad)}`).join('\n') +
                 '\n\nSubtotal: ' + formatPrecio(subtotal)

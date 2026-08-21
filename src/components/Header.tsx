@@ -49,7 +49,7 @@ export default function Header() {
             )}
           </button>
           <a
-            href="https://wa.me/51999999999?text=Hola,%20quiero%20cotizar%20un%20producto"
+            href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden lg:block bg-[var(--color-whatsapp)] text-white px-4 py-2 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"
@@ -72,7 +72,7 @@ export default function Header() {
           <Link to="/catalogo" onClick={() => setMenuOpen(false)} className="hover:text-[var(--color-accent)] transition-colors">Catálogo</Link>
           <Link to="/contacto" onClick={() => setMenuOpen(false)} className="hover:text-[var(--color-accent)] transition-colors">Contacto</Link>
           <a
-            href="https://wa.me/51999999999?text=Hola,%20quiero%20cotizar%20un%20producto"
+            href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[var(--color-whatsapp)] text-white px-4 py-2 rounded-full text-sm font-semibold text-center hover:opacity-90 transition-opacity"
