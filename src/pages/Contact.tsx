@@ -82,23 +82,26 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-[var(--text-2xl)] font-[var(--font-heading)] font-bold text-[var(--color-secondary)] mb-8">
-        Contacto
-      </h1>
+      <div className="mb-8">
+        <p className="text-sm font-semibold text-[var(--color-primary)] mb-1 uppercase tracking-wider">Estamos aqui para ayudarte</p>
+        <h1 className="text-[var(--text-2xl)] font-[var(--font-heading)] font-bold text-[var(--color-navy)]">
+          Contacto
+        </h1>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Formulario */}
         <div>
-          <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-secondary)] mb-4">
-            Envíanos un mensaje
+          <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-navy)] mb-4">
+            Envianos un mensaje
           </h2>
 
           {enviado ? (
-            <div className="bg-green-50 border border-green-200 rounded-[var(--radius-sm)] p-6 text-center">
+            <div className="bg-green-50 border border-green-200 rounded-xl p-6 text-center">
               <CheckCircle className="w-12 h-12 mx-auto text-green-500 mb-4" />
               <h3 className="text-lg font-semibold text-green-800 mb-2">¡Mensaje enviado!</h3>
               <p className="text-green-600">
-                Gracias por contactarnos. Te responderemos en un máximo de 2 horas hábiles.
+                Gracias por contactarnos. Te responderemos en un maximo de 2 horas habiles.
               </p>
               <button
                 onClick={() => setEnviado(false)}
@@ -119,9 +122,9 @@ export default function Contact() {
                   name="nombre"
                   value={formData.nombre}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-[var(--radius-sm)] border ${
+                  className={`w-full px-4 py-3 rounded-lg border ${
                     errors.nombre ? 'border-red-500' : 'border-[var(--color-border)]'
-                  } bg-[var(--color-surface)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
+                  } bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
                   placeholder="Tu nombre"
                 />
                 {errors.nombre && <p className="text-red-500 text-xs mt-1">{errors.nombre}</p>}
@@ -137,9 +140,9 @@ export default function Contact() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-[var(--radius-sm)] border ${
+                  className={`w-full px-4 py-3 rounded-lg border ${
                     errors.email ? 'border-red-500' : 'border-[var(--color-border)]'
-                  } bg-[var(--color-surface)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
+                  } bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
                   placeholder="tu@correo.com"
                 />
                 {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
@@ -155,9 +158,9 @@ export default function Contact() {
                   name="telefono"
                   value={formData.telefono}
                   onChange={handleChange}
-                  className={`w-full px-4 py-3 rounded-[var(--radius-sm)] border ${
+                  className={`w-full px-4 py-3 rounded-lg border ${
                     errors.telefono ? 'border-red-500' : 'border-[var(--color-border)]'
-                  } bg-[var(--color-surface)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
+                  } bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]`}
                   placeholder="936 608 583"
                 />
                 {errors.telefono && <p className="text-red-500 text-xs mt-1">{errors.telefono}</p>}
@@ -173,17 +176,17 @@ export default function Contact() {
                   value={formData.mensaje}
                   onChange={handleChange}
                   rows={5}
-                  className={`w-full px-4 py-3 rounded-[var(--radius-sm)] border ${
+                  className={`w-full px-4 py-3 rounded-lg border ${
                     errors.mensaje ? 'border-red-500' : 'border-[var(--color-border)]'
-                  } bg-[var(--color-surface)] text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] resize-none`}
-                  placeholder="Cuéntanos en qué podemos ayudarte..."
+                  } bg-white text-[var(--color-text)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] resize-none`}
+                  placeholder="Cuentanos en que podemos ayudarte..."
                 />
                 {errors.mensaje && <p className="text-red-500 text-xs mt-1">{errors.mensaje}</p>}
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white py-3 rounded-[var(--radius-full)] font-semibold flex items-center justify-center gap-2 transition-colors"
+                className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white py-3 rounded-lg font-semibold flex items-center justify-center gap-2 transition-colors"
               >
                 <Send className="w-4 h-4" />
                 Enviar mensaje
@@ -195,9 +198,9 @@ export default function Contact() {
         {/* Información de contacto y FAQ */}
         <div>
           {/* Info de contacto */}
-          <div className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] border border-[var(--color-border)] p-6 mb-8">
-            <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-secondary)] mb-4">
-              Información de contacto
+          <div className="bg-white rounded-xl border border-[var(--color-border)] p-6 mb-8">
+            <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-navy)] mb-4">
+              Informacion de contacto
             </h2>
             <ul className="space-y-4">
               <li className="flex items-center gap-3">
@@ -233,14 +236,14 @@ export default function Contact() {
 
           {/* Preguntas frecuentes */}
           <div>
-            <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-secondary)] mb-4">
+            <h2 className="text-[var(--text-xl)] font-[var(--font-heading)] font-semibold text-[var(--color-navy)] mb-4">
               Preguntas frecuentes
             </h2>
             <div className="space-y-3">
               {FAQ_DATA.map((faq, index) => (
                 <div
                   key={index}
-                  className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] border border-[var(--color-border)] overflow-hidden"
+                  className="bg-white rounded-xl border border-[var(--color-border)] overflow-hidden"
                 >
                   <button
                     onClick={() => setFaqAbierto(faqAbierto === index ? null : index)}
