@@ -1,120 +1,181 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { Search, ShoppingCart, Menu, X, Phone } from 'lucide-react'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Search, ShoppingCart, Menu, X, Phone, MapPin, Clock } from 'lucide-react'
 import { useCart } from '../context/CartContext'
+
+const NAV_LINKS = [
+  { to: '/', label: 'Inicio' },
+  { to: '/catalogo', label: 'Catálogo' },
+  { to: '/contacto', label: 'Contacto' },
+]
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [busqueda, setBusqueda] = useState('')
   const { totalItems, toggleCart } = useCart()
   const navigate = useNavigate()
+  const location = useLocation()
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
     if (busqueda.trim()) {
       navigate(`/catalogo?q=${encodeURIComponent(busqueda.trim())}`)
       setBusqueda('')
+      setMenuOpen(false)
     }
   }
 
+  const isActive = (path: string) => location.pathname === path
+
   return (
-    <header className="sticky top-0 z-50 bg-[var(--color-navy)] text-white">
-      {/* Top bar */}
-      <div className="bg-[var(--color-primary)]">
-        <div className="max-w-7xl mx-auto px-4 py-1.5 flex items-center justify-between text-xs">
-          <div className="flex items-center gap-4">
-            <a href="tel:+51936608583" className="flex items-center gap-1.5 hover:text-[var(--color-light-blue)] transition-colors">
-              <Phone className="w-3 h-3" />
-              <span>+51 936 608 583</span>
+    <header className="sticky top-0 z-50">
+      {/* Top industrial bar — Negro de marca con acentos metálicos */}
+      <div className="bg-[var(--color-dark)] border-b border-white/[0.08]">
+        <div className="max-w-[1280px] mx-auto px-4 h-9 flex items-center justify-between text-[11px] tracking-wide">
+          <div className="flex items-center gap-5">
+            <a href="tel:+51936608583" className="flex items-center gap-1.5 text-white/85 hover:text-white transition-colors">
+              <Phone className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+              <span className="font-semibold">+51 936 608 583</span>
             </a>
-            <span className="hidden sm:inline text-white/60">|</span>
-            <span className="hidden sm:inline text-white/80">Lun - Vie: 8:00 - 18:00</span>
+            <span className="hidden md:flex items-center gap-1.5 text-white/55">
+              <span className="w-px h-3 bg-white/15" />
+              <MapPin className="w-3 h-3" />
+              Av. Industrial 123, Lima — Galería Cuzco
+            </span>
+            <span className="hidden lg:flex items-center gap-1.5 text-white/55">
+              <Clock className="w-3 h-3" />
+              Lun - Sáb 8:00 - 18:00
+            </span>
           </div>
-          <div className="flex items-center gap-3 text-white/80">
-            <a href="https://facebook.com/chamoimport" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
-            <a href="https://instagram.com/chamoimportsrl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-            <a href="https://tiktok.com/@chamoimportsrl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
+          <div className="flex items-center gap-3">
+            <span className="hidden sm:inline text-white/45 text-[10px] uppercase tracking-[0.14em] font-semibold">Síguenos</span>
+            <div className="flex items-center gap-1.5">
+              {[
+                { label: 'FB', href: 'https://facebook.com/chamoimport' },
+                { label: 'IG', href: 'https://instagram.com/chamoimportsrl' },
+                { label: 'TT', href: 'https://tiktok.com/@chamoimportsrl' },
+              ].map(s => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" className="w-6 h-6 rounded-md bg-white/10 hover:bg-[var(--color-primary)] text-white/75 hover:text-white flex items-center justify-center text-[10px] font-bold transition-colors">
+                  {s.label}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Main header */}
-      <div className="max-w-7xl mx-auto px-4 py-3">
-        <div className="flex items-center justify-between gap-4">
-          {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 shrink-0">
-            <img src="/brand/logo-white.svg" alt="Chamo Import" className="h-10" />
-          </Link>
+      {/* Main header — blanco industrial con línea metálica superior */}
+      <div className="bg-white border-b border-[var(--color-border)] shadow-[var(--shadow-sm)]">
+        <div className="max-w-[1280px] mx-auto px-4">
+          {/* franja superior azul primaria (detalle de marca) */}
+          <div className="h-[3px] bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-accent)] to-[var(--color-primary)] -mx-4 mb-0" />
+          <div className="flex items-center gap-4 py-3">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-3 shrink-0">
+              <img src="/brand/logo.svg" alt="Chamo Import" className="h-11 w-auto hidden sm:block" onError={(e)=>{ (e.target as HTMLImageElement).style.display='none' }} />
+              {/* fallback textual si no carga svg */}
+              <div className="flex items-center gap-2 sm:hidden">
+                <div className="w-9 h-9 rounded-lg bg-[var(--color-primary)] flex items-center justify-center text-white font-extrabold text-sm">CI</div>
+                <div className="leading-none">
+                  <div className="font-[var(--font-heading)] font-extrabold text-[13px] tracking-tight text-[var(--color-dark)]">CHAMO<span className="text-[var(--color-primary)]"> IMPORT</span></div>
+                  <div className="text-[10px] tracking-[0.18em] font-bold text-[var(--color-metallic)] -mt-0.5">S.R.L.</div>
+                </div>
+              </div>
+              <div className="hidden sm:block leading-none">
+                <div className="font-[var(--font-heading)] font-extrabold text-[15px] tracking-tight text-[var(--color-dark)]">CHAMO<span className="text-[var(--color-primary)]"> IMPORT</span></div>
+                <div className="text-[11px] tracking-[0.22em] font-bold text-[var(--color-metallic)]">S.R.L.</div>
+              </div>
+              <span className="hidden lg:flex items-center ml-3 pl-3 border-l border-[var(--color-border)] text-[11px] leading-tight text-[var(--color-text-muted)]">
+                Ferretería<br/>e Iluminación
+              </span>
+            </Link>
 
-          {/* Nav */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link to="/" className="hover:text-[var(--color-light-blue)] transition-colors">Inicio</Link>
-            <Link to="/catalogo" className="hover:text-[var(--color-light-blue)] transition-colors">Catálogo</Link>
-            <Link to="/contacto" className="hover:text-[var(--color-light-blue)] transition-colors">Contacto</Link>
-          </nav>
+            {/* Nav desktop */}
+            <nav className="hidden md:flex items-center gap-1 ml-6">
+              {NAV_LINKS.map(l => (
+                <Link
+                  key={l.to}
+                  to={l.to}
+                  className={`px-3.5 py-2 rounded-lg text-[13px] font-semibold tracking-wide uppercase transition-colors ${isActive(l.to) ? 'bg-[var(--color-primary)] text-white shadow-[var(--shadow-sm)]' : 'text-[var(--color-text)] hover:bg-[var(--color-bg)]'}`}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </nav>
 
-          {/* Search + Cart + WhatsApp */}
-          <div className="flex items-center gap-3 flex-1 max-w-lg">
-            <form onSubmit={handleSearch} className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            {/* Search */}
+            <form onSubmit={handleSearch} className="flex-1 max-w-[520px] ml-auto relative hidden sm:flex">
+              <div className="relative w-full">
+                <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)]" />
+                <input
+                  type="text"
+                  placeholder="Buscar herramientas, focos, cables…"
+                  value={busqueda}
+                  onChange={(e) => setBusqueda(e.target.value)}
+                  className="w-full pl-10 pr-4 h-10 rounded-xl bg-[var(--color-bg)] border border-[var(--color-border)] text-sm placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary)] focus:ring-4 focus:ring-[var(--color-primary)]/10 transition-all"
+                />
+              </div>
+            </form>
+
+            {/* Actions */}
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={toggleCart}
+                className="relative w-10 h-10 rounded-xl border border-[var(--color-border)] bg-white hover:border-[var(--color-primary)] hover:bg-[var(--color-bg-alt)] flex items-center justify-center transition-colors"
+                aria-label="Ver cotización"
+              >
+                <ShoppingCart className="w-[18px] h-[18px] text-[var(--color-dark)]" />
+                {totalItems > 0 && (
+                  <span className="absolute -top-1.5 -right-1.5 bg-[var(--color-accent)] text-white text-[11px] min-w-5 h-5 px-1 rounded-full flex items-center justify-center font-bold shadow-[var(--shadow-sm)]">
+                    {totalItems}
+                  </span>
+                )}
+              </button>
+              <a
+                href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden lg:inline-flex items-center gap-2 bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white h-10 px-5 rounded-xl text-[13px] font-bold tracking-wide uppercase shadow-[var(--shadow-sm)] transition-colors"
+              >
+                Cotizar
+              </a>
+              <button
+                className="md:hidden w-10 h-10 rounded-xl border border-[var(--color-border)] bg-white flex items-center justify-center"
+                onClick={() => setMenuOpen(!menuOpen)}
+                aria-label="Menú"
+              >
+                {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile search */}
+          <form onSubmit={handleSearch} className="sm:hidden pb-3">
+            <div className="relative">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--color-text-muted)]" />
               <input
                 type="text"
                 placeholder="Buscar productos..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 rounded-lg bg-white/10 text-white text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent)] focus:bg-white/15 transition-all"
+                className="w-full pl-10 pr-4 h-10 rounded-xl bg-[var(--color-bg)] border border-[var(--color-border)] text-sm focus:outline-none focus:border-[var(--color-primary)] focus:ring-4 focus:ring-[var(--color-primary)]/10"
               />
-            </form>
-            <button
-              onClick={toggleCart}
-              className="relative p-2.5 hover:bg-white/10 rounded-lg transition-colors"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              {totalItems > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-[var(--color-accent)] text-white text-xs w-5 h-5 rounded-full flex items-center justify-center font-bold">
-                  {totalItems}
-                </span>
-              )}
-            </button>
-            <a
-              href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden lg:flex items-center gap-2 bg-[var(--color-whatsapp)] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:bg-[#20bd5a] transition-colors"
-            >
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
-              <span className="hidden xl:inline">Cotizar</span>
-            </a>
-          </div>
-
-          {/* Mobile menu toggle */}
-          <button
-            className="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-          </button>
+            </div>
+          </form>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {menuOpen && (
-        <nav className="md:hidden bg-[var(--color-primary-dark)] px-4 py-4 flex flex-col gap-3 text-sm font-medium border-t border-white/10">
-          <Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-[var(--color-light-blue)] transition-colors py-2">Inicio</Link>
-          <Link to="/catalogo" onClick={() => setMenuOpen(false)} className="hover:text-[var(--color-light-blue)] transition-colors py-2">Catálogo</Link>
-          <Link to="/contacto" onClick={() => setMenuOpen(false)} className="hover:text-[var(--color-light-blue)] transition-colors py-2">Contacto</Link>
-          <a
-            href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[var(--color-whatsapp)] text-white px-4 py-3 rounded-lg text-sm font-semibold text-center hover:bg-[#20bd5a] transition-colors mt-2"
-          >
-            Cotizar por WhatsApp
-          </a>
-        </nav>
-      )}
+        {/* Mobile drawer */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-[var(--color-border)] bg-white">
+            <nav className="px-4 py-3 flex flex-col gap-1">
+              {NAV_LINKS.map(l => (
+                <Link key={l.to} to={l.to} onClick={() => setMenuOpen(false)} className={`px-3 py-3 rounded-xl text-sm font-semibold ${isActive(l.to) ? 'bg-[var(--color-primary)] text-white' : 'text-[var(--color-text)] hover:bg-[var(--color-bg)]'}`}>{l.label}</Link>
+              ))}
+              <a href="https://wa.me/51936608583?text=Hola,%20quiero%20cotizar%20un%20producto" target="_blank" rel="noopener noreferrer" className="mt-2 bg-[var(--color-whatsapp)] text-white px-4 py-3 rounded-xl text-sm font-bold text-center">Cotizar por WhatsApp</a>
+            </nav>
+          </div>
+        )}
+      </div>
     </header>
   )
 }
