@@ -63,7 +63,7 @@
         "imagenes":  [
                          "/products/PROD-008.svg"
                      ],
-        "destacado":  false,
+        "destacado":  true,
         "etiquetas":  [
                           "electrico",
                           "potente"
@@ -127,7 +127,7 @@
     {
         "id":  "PROD-006",
         "sku":  "FER-006",
-        "nombre":  "Set de 12 Destornilladores de Precisión con Punta Magnética para Trabajo en Electrónica y Mecánica",
+        "nombre":  "Set de 21 Destornilladores de Precisión con Punta Magnética para Trabajo en Electrónica y Mecánica",
         "descripcion":  "Juego de destornilladores de precisión con puntas magnéticas, mangos ergonómicos y estuche portátil.",
         "categoria":  "ferreteria",
         "marca":  "Bahco",
@@ -144,7 +144,7 @@
                           "electrónica"
                       ],
         "especificaciones":  {
-                                 "Piezas":  "12",
+                                 "Piezas":  "21",
                                  "Punta":  "Magnética",
                                  "Material":  "Vanadio"
                              }
@@ -161,7 +161,7 @@
         "precioAnterior":  null,
         "stock":  45,
         "imagenes":  [
-                         "/products/PROD-007.svg"
+                         "/products/PROD-012.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -186,7 +186,7 @@
         "precioAnterior":  null,
         "stock":  20,
         "imagenes":  [
-                         "/products/PROD-008.svg"
+                         "/products/PROD-013.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -236,7 +236,7 @@
         "precioAnterior":  null,
         "stock":  80,
         "imagenes":  [
-                         "/products/PROD-002.svg"
+                         "/products/PROD-014.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -261,7 +261,7 @@
         "precioAnterior":  null,
         "stock":  25,
         "imagenes":  [
-                         "/products/PROD-011.svg"
+                         "/products/PROD-015.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -285,9 +285,7 @@
         "precioMayorista":  15,
         "precioAnterior":  null,
         "stock":  60,
-        "imagenes":  [
-                         "/products/PROD-012.svg"
-                     ],
+        "imagenes":  [],
         "destacado":  false,
         "etiquetas":  [
                           "LED",
@@ -311,7 +309,7 @@
         "precioAnterior":  null,
         "stock":  35,
         "imagenes":  [
-                         "/products/PROD-013.svg"
+                         "/products/PROD-017.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -336,7 +334,7 @@
         "precioAnterior":  null,
         "stock":  70,
         "imagenes":  [
-                         "/products/PROD-014.svg"
+                         "/products/PROD-018.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -361,7 +359,7 @@
         "precioAnterior":  null,
         "stock":  30,
         "imagenes":  [
-                         "/products/PROD-015.svg"
+                         "/products/PROD-019.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -386,7 +384,7 @@
         "precioAnterior":  null,
         "stock":  50,
         "imagenes":  [
-                         "/products/PROD-016.svg"
+                         "/products/PROD-020.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -436,7 +434,7 @@
         "precioAnterior":  null,
         "stock":  35,
         "imagenes":  [
-                         "/products/PROD-018.svg"
+                         "/products/PROD-021.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -461,7 +459,7 @@
         "precioAnterior":  null,
         "stock":  0,
         "imagenes":  [
-                         "/products/PROD-019.svg"
+                         "/products/PROD-022.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -486,7 +484,7 @@
         "precioAnterior":  null,
         "stock":  50,
         "imagenes":  [
-                         "/products/PROD-020.svg"
+                         "/products/PROD-023.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -511,7 +509,7 @@
         "precioAnterior":  null,
         "stock":  80,
         "imagenes":  [
-                         "/products/PROD-021.svg"
+                         "/products/PROD-024.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -536,7 +534,7 @@
         "precioAnterior":  null,
         "stock":  30,
         "imagenes":  [
-                         "/products/PROD-022.svg"
+                         "/products/PROD-025.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -561,7 +559,7 @@
         "precioAnterior":  null,
         "stock":  120,
         "imagenes":  [
-                         "/products/PROD-023.svg"
+                         "/products/PROD-026.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -636,7 +634,7 @@
         "precioAnterior":  null,
         "stock":  90,
         "imagenes":  [
-                         "/products/PROD-026.svg"
+                         "/products/PROD-027.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -661,7 +659,7 @@
         "precioAnterior":  null,
         "stock":  75,
         "imagenes":  [
-                         "/products/PROD-027.svg"
+                         "/products/PROD-028.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -686,7 +684,7 @@
         "precioAnterior":  null,
         "stock":  35,
         "imagenes":  [
-                         "/products/PROD-028.svg"
+                         "/products/PROD-029.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -711,7 +709,7 @@
         "precioAnterior":  null,
         "stock":  100,
         "imagenes":  [
-                         "/products/PROD-029.svg"
+                         "/products/PROD-030.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -736,9 +734,9 @@
         "precioAnterior":  52,
         "stock":  45,
         "imagenes":  [
-                         "/products/PROD-030.svg"
+                         "/products/PROD-031.svg"
                      ],
-        "destacado":  false,
+        "destacado":  true,
         "etiquetas":  [
                           "impermeabilizante",
                           "oferta"
@@ -761,7 +759,7 @@
         "precioAnterior":  null,
         "stock":  70,
         "imagenes":  [
-                         "/products/PROD-031.svg"
+                         "/products/PROD-032.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -786,7 +784,7 @@
         "precioAnterior":  null,
         "stock":  55,
         "imagenes":  [
-                         "/products/PROD-032.svg"
+                         "/products/PROD-033.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -811,7 +809,7 @@
         "precioAnterior":  null,
         "stock":  40,
         "imagenes":  [
-                         "/products/PROD-033.svg"
+                         "/products/PROD-034.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -836,7 +834,7 @@
         "precioAnterior":  null,
         "stock":  25,
         "imagenes":  [
-                         "/products/PROD-034.svg"
+                         "/products/PROD-035.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -927,7 +925,7 @@
     {
         "id":  "PROD-038",
         "sku":  "CAM-004",
-        "nombre":  "Caja de Colores de 36 Tonos",
+        "nombre":  "Caja de Colores de 38 Tonos",
         "descripcion":  "Set de 36 colores de madera con punta de grafito, colores vibrantes y caja organizadora.",
         "categoria":  "campana-escolar",
         "marca":  "Norma",
@@ -952,7 +950,7 @@
     {
         "id":  "PROD-039",
         "sku":  "CAM-005",
-        "nombre":  "Juego de Geometría Escolar 7 Piezas",
+        "nombre":  "Juego de Geometría Escolar 5 Piezas",
         "descripcion":  "Set de geometría con regla, escuadra, transportador, compás, mango y estuche plástico.",
         "categoria":  "campana-escolar",
         "marca":  "Norma",
@@ -969,7 +967,7 @@
                           "matemáticas"
                       ],
         "especificaciones":  {
-                                 "Piezas":  "7",
+                                 "Piezas":  "5",
                                  "Material":  "Plástico",
                                  "Estuche":  "Sí"
                              }
@@ -980,7 +978,7 @@
         "nombre":  "Cartuchera Doble Cierre Escolar con Funda",
         "descripcion":  "Cartuchera escolar de nylon con doble cierre, 3 compartimentos y funda transparente para nombre.",
         "categoria":  "campana-escolar",
-        "marca":  "Totto",
+        "marca":  "Norma",
         "precio":  35,
         "precioMayorista":  30,
         "precioAnterior":  null,

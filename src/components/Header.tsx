@@ -68,6 +68,12 @@ export default function Header() {
 
   const isActive = (path: string) => location.pathname === path
 
+  const handleNavClick = (to: string) => {
+    if (to === location.pathname) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <header className="sticky top-0 z-50">
       <TopBar />
@@ -76,7 +82,7 @@ export default function Header() {
         <div className="max-w-[1280px] mx-auto px-4">
           <div className="h-[2px] bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-accent)] to-[var(--color-metallic)] -mx-4" />
           <div className="flex items-center gap-3 lg:gap-6 py-2.5">
-            <Link to="/" onClick={() => window.location.reload()} className="shrink-0 flex items-center">
+            <Link to="/" className="shrink-0 flex items-center" onClick={() => { window.location.href = '/' }}>
               <img
                 src="/brand/logo.png"
                 alt="CHAMO IMPORT S.R.L."
@@ -102,6 +108,7 @@ export default function Header() {
                 <Link
                   key={l.to}
                   to={l.to}
+                  onClick={() => handleNavClick(l.to)}
                   className={`px-4 h-8 rounded-full inline-flex items-center text-[13px] font-semibold tracking-wide uppercase transition-all duration-200 ${
                     isActive(l.to)
                       ? 'bg-white text-[var(--color-navy)] shadow-sm'

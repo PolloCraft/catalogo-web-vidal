@@ -40,7 +40,6 @@ export default function BrandsStrip({ brands, loading }: BrandsStripProps) {
       <div className="max-w-[1280px] mx-auto px-4 mb-5">
         <div className="flex items-center justify-between gap-4">
           <h2 className="font-[var(--font-heading)] font-extrabold tracking-tight text-[14px] uppercase text-[var(--color-metallic)]">Marcas distribuidoras</h2>
-          <span className="text-[13px] text-[var(--color-text-muted)] hidden sm:inline font-medium">Construye tu sueño con marcas que inspiran confianza</span>
         </div>
       </div>
 

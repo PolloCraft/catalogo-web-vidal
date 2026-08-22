@@ -80,6 +80,6 @@ img { max-width: 100%; height: auto; }
   100% { transform: translateX(-50%); }
 }
 .brands-track {
-  animation: brands-scroll 40s linear infinite;
+  animation: brands-scroll 70s linear infinite;
   will-change: transform;
 }

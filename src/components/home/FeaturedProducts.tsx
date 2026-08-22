@@ -29,13 +29,27 @@ export default function FeaturedProducts({ products, loading }: FeaturedProducts
           </div>
         ) : (
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
-            {products.slice(0, 8).map(product => (
+            {products.slice(0, 8).map(product => {
+              const descuento = product.precioAnterior
+                ? Math.round((1 - product.precio / product.precioAnterior) * 100)
+                : null
+              return (
               <Link key={product.id} to={`/producto/${product.id}`} className="group rounded-2xl overflow-hidden bg-white border border-[var(--color-border)] hover:border-[var(--color-primary)]/40 hover:shadow-lg transition-all flex flex-col shadow-sm">
                 <div className="h-[180px] bg-white relative overflow-hidden border-b border-[var(--color-border)]">
                   <img src={getProductImage(product)} alt={product.nombre} loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                   <div className="absolute top-2 left-2 bg-[var(--color-navy)]/80 text-white text-[9px] font-bold tracking-wider px-2 py-0.5 rounded-md backdrop-blur-sm">
                     {product.sku}
                   </div>
+                  {descuento && (
+                    <span className="absolute top-2 right-2 bg-[var(--color-primary)] text-white text-[11px] font-extrabold tracking-wide px-2.5 py-1 rounded-full shadow">
+                      -{descuento}%
+                    </span>
+                  )}
+                  {product.stock === 0 && (
+                    <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px] flex items-center justify-center">
+                      <span className="bg-[var(--color-navy)] text-white text-xs font-bold px-4 py-2 rounded-full shadow">AGOTADO</span>
+                    </div>
+                  )}
                 </div>
                 <div className="p-4 flex-1 flex flex-col">
                   <div className="text-[10px] font-extrabold tracking-[0.16em] uppercase text-[var(--color-metallic)] mb-1">{product.marca}</div>
@@ -46,7 +60,7 @@ export default function FeaturedProducts({ products, loading }: FeaturedProducts
                   </div>
                 </div>
               </Link>
-            ))}
+            )})}
           </div>
         )}
       </div>
