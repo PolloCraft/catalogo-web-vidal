@@ -6,14 +6,6 @@ Interfaz completa de un catálogo mayorista construida sobre datos simulados, re
 
 Catálogo web para una empresa importadora y distribuidora de ferretería, iluminación, artículos eléctricos, adhesivos y campaña escolar. Toda la información proviene de archivos JSON locales que simulan la respuesta de una API, con un delay artificial de 500-800ms para replicar un entorno real.
 
-## Capturas
-
-### Escritorio
-![Escritorio](capturas/escritorio.png)
-
-### Móvil
-![Móvil](capturas/movil.png)
-
 ## Funcionalidades Implementadas
 
 | ID | Requisito | Estado |
