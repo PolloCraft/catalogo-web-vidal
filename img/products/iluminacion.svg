@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141518"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="45%">
+      <stop offset="0%" stop-color="#FFF7D6"/>
+      <stop offset="35%" stop-color="#FFE066"/>
+      <stop offset="70%" stop-color="#FFB800" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFB800" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <circle cx="200" cy="126" r="110" fill="url(#glow)"/>
+  <!-- Bombillo LED -->
+  <g>
+    <path d="M200 58 a52 52 0 0 1 30 94 l-4 22 h-52 l-4 -22 a52 52 0 0 1 30 -94 z" fill="#E8EDF2"/>
+    <path d="M200 58 a52 52 0 0 1 30 94 l-4 22 h-26 z" fill="#c3ccd6"/>
+    <rect x="178" y="176" width="44" height="8" rx="3" fill="#A6A8AB"/>
+    <rect x="180" y="186" width="40" height="7" rx="3" fill="#8b8e93"/>
+    <rect x="183" y="195" width="34" height="14" rx="5" fill="#66C6FF"/>
+    <g stroke="#009DE0" stroke-width="3" stroke-linecap="round">
+      <line x1="200" y1="86" x2="200" y2="140"/>
+      <line x1="176" y1="98" x2="196" y2="128"/>
+      <line x1="224" y1="98" x2="204" y2="128"/>
+    </g>
+  </g>
+  <text x="200" y="268" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="800" fill="#66C6FF" letter-spacing="4">ILUMINACIÓN LED</text>
+</svg>

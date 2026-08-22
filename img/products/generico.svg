@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#141518"/>
+      <stop offset="100%" stop-color="#0D0D0D"/>
+    </linearGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#A6A8AB"/>
+      <stop offset="100%" stop-color="#55585c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#bg)"/>
+  <!-- Caja industrial -->
+  <path d="M200 70 L286 108 L200 146 L114 108 Z" fill="url(#box)"/>
+  <path d="M114 108 L200 146 L200 234 L114 196 Z" fill="#7d8085"/>
+  <path d="M286 108 L200 146 L200 234 L286 196 Z" fill="#8b8e93"/>
+  <path d="M157 89 L243 127 L243 148 L157 110 Z" fill="#009DE0" opacity="0.9"/>
+  <text x="200" y="268" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="800" fill="#66C6FF" letter-spacing="4">CHAMO IMPORT</text>
+</svg>
