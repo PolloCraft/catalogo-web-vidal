@@ -17,7 +17,7 @@ Coloca aquí los logos de las marcas distribuidoras en formato **PNG** con fondo
 Usa el **nombre exacto de la marca** en minúsculas, sin espacios, con guiones si es necesario:
 
 ```
-public/brands/
+public/distributors/
   stanley.png
   truper.png
   philips.png
