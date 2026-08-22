@@ -1,10 +1,12 @@
-﻿export default function WhatsAppButton() {
+﻿import { whatsappGeneral } from '../utils/whatsapp'
+
+export default function WhatsAppButton() {
   return (
     <a
-      href="https://wa.me/51936608583?text=Hola%20Chamo%20Import,%20quiero%20cotizar%20al%20por%20mayor"
+      href={whatsappGeneral()}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-40 bg-[var(--color-whatsapp)] text-white w-[56px] h-[56px] rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(37,211,102,0.35)] hover:scale-[1.04] transition-transform border-2 border-white"
+      className="fixed bottom-5 right-5 z-40 bg-[var(--color-whatsapp)] text-white w-[56px] h-[56px] rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(37,211,102,0.35)] hover:scale-[1.08] transition-transform border-2 border-white whatsapp-pulse"
       aria-label="Cotizar por WhatsApp"
     >
       <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

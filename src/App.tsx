@@ -4,6 +4,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import CartSidebar from './components/CartSidebar'
 import WhatsAppButton from './components/WhatsAppButton'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Catalog from './pages/Catalog'
 import ProductDetail from './pages/ProductDetail'
@@ -14,10 +15,14 @@ function App() {
   return (
     <CartProvider>
       <div className="min-h-screen flex flex-col">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-[var(--color-primary)] focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-bold focus:outline-none">
+          Saltar al contenido principal
+        </a>
+        <ScrollToTop />
         <Header />
         <CartSidebar />
         <WhatsAppButton />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" role="main">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/catalogo" element={<Catalog />} />

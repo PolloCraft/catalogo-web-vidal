@@ -1,38 +1,38 @@
 [
   {
     "id": "ferreteria",
-    "nombre": "Ferreteria",
-    "imagen": "/categories/ferreteria.jpg",
-    "descripcion": "Herramientas, tornilleria y materiales de construccion"
+    "nombre": "Herramientas",
+    "imagen": "/categories/ferreteria.svg",
+    "descripcion": "Herramientas básicas, mecánicas, de carpintería y jardinería"
   },
   {
     "id": "iluminacion",
-    "nombre": "Iluminacion",
-    "imagen": "/categories/iluminacion.jpg",
-    "descripcion": "Luminarias LED, empotrados y accesorios de iluminacion"
+    "nombre": "Iluminación",
+    "imagen": "/categories/iluminacion.svg",
+    "descripcion": "Focos, linternas, luces LED, reflectores y paneles"
   },
   {
     "id": "electricos",
-    "nombre": "Articulos Electricos",
-    "imagen": "/categories/electricos.jpg",
-    "descripcion": "Cables, interruptores, contactos y tableros"
+    "nombre": "Artículos Eléctricos",
+    "imagen": "/categories/electricos.svg",
+    "descripcion": "Cables, interruptores, contactos, tableros y extensiones"
   },
   {
     "id": "adhesivos",
     "nombre": "Adhesivos",
-    "imagen": "/categories/adhesivos.jpg",
-    "descripcion": "Siliconas, pegamentos y selladores para todo uso"
+    "imagen": "/categories/adhesivos.svg",
+    "descripcion": "Cintas, pegamentos, siliconas y selladores"
   },
   {
     "id": "seguridad",
     "nombre": "Seguridad Industrial",
-    "imagen": "/categories/seguridad.jpg",
-    "descripcion": "Equipos de proteccion personal y seguridad"
+    "imagen": "/categories/seguridad.svg",
+    "descripcion": "Cascos, guantes, lentes, chalecos y calzado de seguridad"
   },
   {
     "id": "campana-escolar",
-    "nombre": "Campana Escolar",
-    "imagen": "/categories/campana-escolar.jpg",
-    "descripcion": "Utiles escolares, mochilas y articulos de oficina"
+    "nombre": "Campaña Escolar",
+    "imagen": "/categories/campana-escolar.svg",
+    "descripcion": "Útiles escolares, cuadernos, colores y artículos de temporada"
   }
 ]

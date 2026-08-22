@@ -8,6 +8,8 @@ interface Props {
   onClear: () => void
 }
 
+const CATEGORIAS = ['ferreteria', 'iluminacion', 'electricos', 'adhesivos', 'seguridad', 'campana-escolar']
+
 export default function SidebarFilters({ filters, marcas, precioMax, onChange, onClear }: Props) {
   const toggleCategoria = (catId: string) => {
     const updated = filters.categorias.includes(catId)
@@ -43,13 +45,13 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
     filters.disponible
 
   return (
-    <aside className="bg-[var(--color-surface)] rounded-[var(--radius-sm)] border border-[var(--color-border)] p-4 space-y-6">
+    <aside className="bg-white rounded-2xl border border-[var(--color-border)] p-5 space-y-6 shadow-sm">
       <div className="flex items-center justify-between">
-        <h3 className="font-[var(--font-heading)] font-semibold text-[var(--color-secondary)]">Filtros</h3>
+        <h3 className="font-bold text-[var(--color-navy)]">Filtros</h3>
         {hasActiveFilters && (
           <button
             onClick={onClear}
-            className="text-xs text-[var(--color-primary)] hover:underline"
+            className="text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-dark)] hover:underline transition-colors font-medium"
           >
             Limpiar todo
           </button>
@@ -58,15 +60,15 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
 
       {/* Categorías */}
       <div>
-        <h4 className="text-sm font-semibold text-[var(--color-text)] mb-2">Categoría</h4>
-        <div className="space-y-1">
-          {['ferreteria', 'iluminacion', 'electricos', 'adhesivos', 'seguridad', 'campana-escolar'].map(cat => (
-            <label key={cat} className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]">
+        <h4 className="text-sm font-bold text-[var(--color-navy)] mb-3 uppercase tracking-[0.12em] text-[11px]">Categoría</h4>
+        <div className="space-y-2">
+          {CATEGORIAS.map(cat => (
+            <label key={cat} className="flex items-center gap-2.5 text-sm text-[var(--color-text-secondary)] cursor-pointer hover:text-[var(--color-primary)] transition-colors group font-medium">
               <input
                 type="checkbox"
                 checked={filters.categorias.includes(cat)}
                 onChange={() => toggleCategoria(cat)}
-                className="w-4 h-4 rounded border-[var(--color-border)] text-[var(--color-primary)] focus:ring-[var(--color-primary)]"
+                className="w-4 h-4 rounded accent-[var(--color-accent)] bg-white border-[var(--color-border-strong)] cursor-pointer"
               />
               <span className="capitalize">{cat.replace('-', ' ')}</span>
             </label>
@@ -76,15 +78,15 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
 
       {/* Marcas */}
       <div>
-        <h4 className="text-sm font-semibold text-[var(--color-text)] mb-2">Marca</h4>
-        <div className="space-y-1 max-h-40 overflow-y-auto">
+        <h4 className="text-sm font-bold text-[var(--color-navy)] mb-3 uppercase text-[11px] tracking-[0.12em]">Marca</h4>
+        <div className="space-y-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
           {marcas.map(marca => (
-            <label key={marca} className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]">
+            <label key={marca} className="flex items-center gap-2.5 text-sm text-[var(--color-text-secondary)] cursor-pointer hover:text-[var(--color-primary)] transition-colors group font-medium">
               <input
                 type="checkbox"
                 checked={filters.marcas.includes(marca)}
                 onChange={() => toggleMarca(marca)}
-                className="w-4 h-4 rounded border-[var(--color-border)] text-[var(--color-primary)] focus:ring-[var(--color-primary)]"
+                className="w-4 h-4 rounded accent-[var(--color-accent)] bg-white border-[var(--color-border-strong)] cursor-pointer"
               />
               <span>{marca}</span>
             </label>
@@ -94,14 +96,14 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
 
       {/* Precio */}
       <div>
-        <h4 className="text-sm font-semibold text-[var(--color-text)] mb-2">Rango de precio</h4>
+        <h4 className="text-sm font-bold text-[var(--color-navy)] mb-3 uppercase text-[11px] tracking-[0.12em]">Rango de precio</h4>
         <div className="flex items-center gap-2">
           <input
             type="number"
             min={0}
             value={filters.precioMin}
             onChange={(e) => handlePrecioMin(e.target.value)}
-            className="w-full px-3 py-1.5 text-sm border border-[var(--color-border)] rounded-[var(--radius-sm)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+            className="w-full px-3 py-2 text-sm bg-gray-50 text-[var(--color-text)] border border-[var(--color-border)] rounded-xl placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
             placeholder="Min"
           />
           <span className="text-[var(--color-text-muted)]">-</span>
@@ -110,7 +112,7 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
             min={0}
             value={filters.precioMax}
             onChange={(e) => handlePrecioMax(e.target.value)}
-            className="w-full px-3 py-1.5 text-sm border border-[var(--color-border)] rounded-[var(--radius-sm)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+            className="w-full px-3 py-2 text-sm bg-gray-50 text-[var(--color-text)] border border-[var(--color-border)] rounded-xl placeholder:text-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-accent)] focus:ring-2 focus:ring-[var(--color-accent)]/20 transition-all"
             placeholder="Max"
           />
         </div>
@@ -118,12 +120,12 @@ export default function SidebarFilters({ filters, marcas, precioMax, onChange, o
 
       {/* Disponibilidad */}
       <div>
-        <label className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] cursor-pointer hover:text-[var(--color-text)]">
+        <label className="flex items-center gap-2.5 text-sm text-[var(--color-text-secondary)] cursor-pointer hover:text-[var(--color-primary)] transition-colors group font-medium border-t border-[var(--color-border)] pt-5 mt-5">
           <input
             type="checkbox"
             checked={filters.disponible}
             onChange={handleDisponibilidad}
-            className="w-4 h-4 rounded border-[var(--color-border)] text-[var(--color-primary)] focus:ring-[var(--color-primary)]"
+            className="w-4 h-4 rounded accent-[var(--color-accent)] bg-white border-[var(--color-border-strong)] cursor-pointer"
           />
           <span>Solo disponibles</span>
         </label>

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback, type ReactNode } from 'react'
+import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react'
 import type { Product, CartItem } from '../types'
 
 interface CartContextType {
@@ -16,8 +16,27 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | null>(null)
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([])
+  const [items, setItems] = useState<CartItem[]>(() => {
+    try {
+      const saved = localStorage.getItem('chamo_cart_items')
+      if (saved) {
+        return JSON.parse(saved)
+      }
+    } catch (e) {
+      console.error('Failed to parse cart items from local storage', e)
+    }
+    return []
+  })
+  
   const [isOpen, setIsOpen] = useState(false)
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('chamo_cart_items', JSON.stringify(items))
+    } catch (e) {
+      console.error('Failed to save cart items to local storage', e)
+    }
+  }, [items])
 
   const addItem = useCallback((product: Product) => {
     setItems(prev => {
