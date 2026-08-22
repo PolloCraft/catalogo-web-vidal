@@ -36,7 +36,7 @@
         "precioAnterior":  null,
         "stock":  30,
         "imagenes":  [
-                         "/products/PROD-002.svg"
+                         "/products/PROD-007.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -61,7 +61,7 @@
         "precioAnterior":  null,
         "stock":  15,
         "imagenes":  [
-                         "/products/PROD-003.svg"
+                         "/products/PROD-008.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -86,7 +86,7 @@
         "precioAnterior":  null,
         "stock":  0,
         "imagenes":  [
-                         "/products/PROD-004.svg"
+                         "/products/PROD-009.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -111,7 +111,7 @@
         "precioAnterior":  null,
         "stock":  40,
         "imagenes":  [
-                         "/products/PROD-005.svg"
+                         "/products/PROD-010.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -136,7 +136,7 @@
         "precioAnterior":  null,
         "stock":  25,
         "imagenes":  [
-                         "/products/PROD-006.svg"
+                         "/products/PROD-011.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -211,7 +211,7 @@
         "precioAnterior":  null,
         "stock":  100,
         "imagenes":  [
-                         "/products/PROD-009.svg"
+                         "/products/PROD-002.svg"
                      ],
         "destacado":  true,
         "etiquetas":  [
@@ -236,7 +236,7 @@
         "precioAnterior":  null,
         "stock":  80,
         "imagenes":  [
-                         "/products/PROD-010.svg"
+                         "/products/PROD-002.svg"
                      ],
         "destacado":  false,
         "etiquetas":  [
@@ -411,7 +411,7 @@
         "precioAnterior":  null,
         "stock":  40,
         "imagenes":  [
-                         "/products/PROD-017.svg"
+                         "/products/PROD-003.svg"
                      ],
         "destacado":  true,
         "etiquetas":  [
@@ -586,7 +586,7 @@
         "precioAnterior":  null,
         "stock":  60,
         "imagenes":  [
-                         "/products/PROD-024.svg"
+                         "/products/PROD-004.svg"
                      ],
         "destacado":  true,
         "etiquetas":  [
@@ -611,7 +611,7 @@
         "precioAnterior":  null,
         "stock":  200,
         "imagenes":  [
-                         "/products/PROD-025.svg"
+                         "/products/PROD-005.svg"
                      ],
         "destacado":  true,
         "etiquetas":  [
@@ -861,7 +861,7 @@
         "precioAnterior":  null,
         "stock":  50,
         "imagenes":  [
-                         "/products/PROD-035.svg"
+                         "/products/PROD-006.svg"
                      ],
         "destacado":  true,
         "etiquetas":  [
